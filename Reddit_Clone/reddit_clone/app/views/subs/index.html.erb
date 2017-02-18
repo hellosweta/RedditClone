@@ -1,0 +1,14 @@
+<h2>Welcome to the subs take look!</h2>
+
+
+<%@subs.each do |sub1| %>
+
+    <ul>
+
+
+    <li> <%= link_to sub1.title, sub_url(sub1) %> </li>
+
+  </ul>
+
+<%end  %>
+<%= link_to "Add Sub", new_sub_url %>

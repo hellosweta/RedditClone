@@ -1,0 +1,19 @@
+<h2>Hey why don't you fix your mistakes on our cool website</h2>
+
+<form class="" action="<%=sub_url(@sub)%>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <input type="hidden" name="_method" value="PATCH">
+  <label for="Title">Title</label>
+
+  <input type="text" name="subs[title]" value=" <%= @sub.title %>">
+   <br>
+   <br>
+
+  <label for="description">Description</label>
+  <br>
+
+  <textarea name="subs[description]" rows="8" cols="80"> <%= @sub.description %></textarea>
+  <input type="submit" name="" value="edit">
+
+</form>

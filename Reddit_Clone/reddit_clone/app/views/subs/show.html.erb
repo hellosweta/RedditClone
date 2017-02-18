@@ -1,0 +1,8 @@
+<h2> <%= @sub.title %> </h2>
+<h4> <%= @sub.description %></h4>
+
+<h4> <% @posts.each do |post| %></h4>
+<h4> <%= link_to post.title, post_url(post) %> </h4>
+<h4> <% end %></h4>
+
+<h5> <%=link_to "Add Post!", "/subs/#{@sub.id}/posts/new" %> </h5>
